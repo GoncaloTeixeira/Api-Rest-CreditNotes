@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 
 app.get("/", (request,result)=>result.send("Olá mundo SD 2020!"));
 
-app.listen(port,function(){ console.log("A iniciação do servidor correu bem!")});
+app.listen(process.env.PORT || 3000,function(){ console.log("A iniciação do servidor correu bem!")});
 
 let apiRoutes = require("./api-routes");
 
